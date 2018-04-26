@@ -1,6 +1,8 @@
+#Programmed by: Matthew Nevle
+#Student Id: Man160530
 CXX = g++
-CXXFLAGS = -I /scratch/perkins/include
-CPPFLAGS = -Wall
+CXXFLAGS = 
+CPPFLAGS = -Wall -I /scratch/perkins/include
 LDFLAGS = -L /scratch/perkins/lib
 LDLIBS = -lcdk -lcurses
 
@@ -13,8 +15,8 @@ all: $(EXECFILE)
 
 #Clean files
 clean:
-	rm -f $(OBJS) $(EXECFILE) *~ \#*
+	rm -f $(OBJS) $(EXECFILE) *.P  *~ \#*
 
 #Specify compiling rules
 $(EXECFILE):	$(OBJS)
-	$(CXX) -static -o $@ $(OBJS) $(LDFLAGS) $(LDLIBS)
+	$(CXX) -o $@ $(OBJS) $(LDFLAGS) $(LDLIBS)
